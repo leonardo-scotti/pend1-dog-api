@@ -54,7 +54,7 @@ header {
 main {
     flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: 12px;
 }
 
