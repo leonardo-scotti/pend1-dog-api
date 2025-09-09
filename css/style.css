@@ -55,6 +55,7 @@ main {
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
 }
 
 main img {
@@ -62,4 +63,12 @@ main img {
     height: 200px;
     object-fit: cover;
     padding: 4px;
+    border-radius: 12px;
+    transition: .5s;
+    opacity: 90%;
+}
+
+img:hover {
+    transform: scale(1.1);
+    opacity: 100%;
 }
