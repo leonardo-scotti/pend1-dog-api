@@ -5,7 +5,7 @@ async function searchingDog() {
     const main = document.getElementById('main');
     const search = document.getElementById('search').value;
 
-    main.innerHTML = ''
+    main.textContent = ''
 
     const photos = await buscarImagens(search);
 
