@@ -5,7 +5,7 @@ async function searchingDog() {
     const main = document.getElementById('main');
     const search = document.getElementById('search').value;
 
-    main.textContent = ''
+    main.replaceChildren()
 
     const photos = await buscarImagens(search);
 
@@ -15,9 +15,6 @@ async function searchingDog() {
 
         main.appendChild(img);
     });
-
-    console.log(search)
-
 }
 
 async function buscarImagens(breed) {
