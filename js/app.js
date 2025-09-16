@@ -1,5 +1,6 @@
 'use strict';
 const searching = document.getElementById('searching');
+const inputBreed = document.getElementById('search');
 
 async function searchingDog() {
     const main = document.getElementById('main');
@@ -10,10 +11,15 @@ async function searchingDog() {
     const photos = await buscarImagens(search);
 
     photos.forEach((url) => {
+        const a = document.createElement('a');
         const img = document.createElement('img');
         img.src = url;
 
-        main.appendChild(img);
+        a.setAttribute('target', '_blank');
+        a.href = url;
+        a.appendChild(img);
+
+        main.appendChild(a);
     });
 }
 
@@ -26,3 +32,8 @@ async function buscarImagens(breed) {
 };
 
 searching.addEventListener('click', searchingDog)
+inputBreed.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter') {
+        searchingDog();
+    }
+});
